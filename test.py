@@ -13,6 +13,7 @@ def imageprepare():
     plt.imshow(im)  #显示需要识别的图片
     plt.show()
     im = im.convert('L')
+	im.save("sample-03.png")  //保存称为png格式，上面打开时候有可能会是jpg
     tv = list(im.getdata()) 
     tva = [(255-x)*1.0/255.0 for x in tv] 
     return tva
